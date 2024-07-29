@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Exercicio1 {
+public class Exercicio2 {
 	public static void main(String[] args) {
 		
 		//Números
@@ -20,10 +20,10 @@ public class Exercicio1 {
 		
 		//Ordem crescente
 		Collections.sort(lista);
-		
+		// Trazendo para ordem decrescente
+		Collections.reverse(lista);
+	
 		System.out.println(lista);
 		
-		
 	}
-	
 }
