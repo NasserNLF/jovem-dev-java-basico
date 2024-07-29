@@ -20,6 +20,7 @@ public class Exercicio2 {
 		
 		//Ordem crescente
 		Collections.sort(lista);
+		
 		// Trazendo para ordem decrescente
 		Collections.reverse(lista);
 	

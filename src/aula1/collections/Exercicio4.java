@@ -9,32 +9,30 @@ import javax.swing.JOptionPane;
 
 public class Exercicio4 {
 	public static void main(String[] args) {
-		Map<Character, Integer> mapa = new HashMap<Character, Integer>();
-		
-		//Lista para ordenar conforme a frase
-		List<Character> chaves = new ArrayList<Character>();
 
-		String frase = JOptionPane.showInputDialog("Digite uma frase: ").trim();
+		Map<Character, Integer> mapa = new HashMap<>();
+		List<Character> listaCaracteres = new ArrayList<>();
+		String frase = JOptionPane.showInputDialog("Coloque uma frase: ").trim();
 
-		// Loop para pegar as letras da frase
 		for (int i = 0; i < frase.length(); i++) {
-			int aux = 0;
+			// Irá verificar se a chave já existe
 			if (mapa.containsKey(frase.charAt(i))) {
-				aux = mapa.get(frase.charAt(i)); // Recebe o valor que está na chave
-				mapa.remove(frase.charAt(i)); // Remove a chave
-				mapa.put(frase.charAt(i), aux + 1); // Cria a chave novamente acrecentando o valor antigo
+				// Irá incrementar o valor sem apagar o que já existe
+				mapa.computeIfPresent(frase.charAt(i), (key, val) -> val + 1);
 			} else {
 				mapa.put(frase.charAt(i), 1);
-				chaves.add(frase.charAt(i)); // A
+				listaCaracteres.add(frase.charAt(i));
 			}
 		}
-		
-		String aux = "";
-		
-		for(Character c : chaves) {
-			aux += c.toString() + "-" + mapa.get(c) + ", ";
+
+		String saida = "";
+
+		// Lembrar de eprguntar como colocar o espaco como ultimo na fila
+		for (Character c : listaCaracteres) {
+			saida += c.toString() + " - " + mapa.get(c) + ", ";
 		}
-		
-		System.out.println(aux);
+
+		System.out.println(saida);
+
 	}
 }

@@ -39,7 +39,7 @@ public class Exercicio6 {
 				+ calculaMedia(notas2) + " \n" + alunos.get(2) + " " +  alunosNotas.get(alunos.get(2)) + "Média: " + calculaMedia(notas3) + " \n");
 
 	}
-
+	
 	public static String cadAluno() {
 		String nome = JOptionPane.showInputDialog("Nome do aluno: ");
 		return nome;
