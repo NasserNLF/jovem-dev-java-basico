@@ -1,4 +1,4 @@
-package aula1.collections;
+package aula1.anotacoes;
 
 import java.util.ArrayList;
 import java.util.List;
