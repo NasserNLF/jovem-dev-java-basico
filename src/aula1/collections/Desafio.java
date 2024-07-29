@@ -13,6 +13,15 @@ public class Desafio {
 		Map<Character, String> listaFinal = new HashMap<>();
 		// ArrayList para auxiliar na inclusão e ordenamento
 		List<String> listaPalavras = new ArrayList<>();
+		List<Character> listaCaracteres = new ArrayList<>();
+		
+		listaCaracteres.add('a');
+		listaCaracteres.add('e');
+		listaCaracteres.add('i');
+		listaCaracteres.add('o');
+		listaCaracteres.add('u');
+		
+		
 		String palavra = "";
 
 		// Preenchimento das palavraas
@@ -54,8 +63,15 @@ public class Desafio {
 			}
 
 		}
-
-		System.out.println(listaFinal);
+		
+		
+		String saida = "";
+		
+		for(Character c: listaCaracteres) {
+			saida += c.toString() + " " + listaFinal.get(c) + "\n";
+		}
+		
+		System.out.println(saida);
 
 	}
 }

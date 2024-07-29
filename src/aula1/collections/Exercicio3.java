@@ -21,12 +21,12 @@ public class Exercicio3 {
 		}
 
 		Collections.sort(conjuntoTodos);
-		System.out.println(conjuntoTodos);
+		System.out.println("Original: " + conjuntoTodos);
 
 		// Inserindo no conjunto os números sem deixando repetir
 		conjuntoSemRepeticao.addAll(conjuntoTodos);
 
-		System.out.println(conjuntoSemRepeticao);
+		System.out.println("Sem repetições: " + conjuntoSemRepeticao);
 
 	}
 }

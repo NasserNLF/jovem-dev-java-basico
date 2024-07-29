@@ -27,7 +27,7 @@ public class Exercicio4 {
 
 		String saida = "";
 
-		// Lembrar de eprguntar como colocar o espaco como ultimo na fila
+		// Lembrar de perguntar como colocar o espaco como ultimo na fila
 		for (Character c : listaCaracteres) {
 			saida += c.toString() + " - " + mapa.get(c) + ", ";
 		}

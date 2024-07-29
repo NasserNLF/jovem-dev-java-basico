@@ -9,9 +9,6 @@ public class Exercicio5 {
 		Random r = new Random();
 		Set<Integer> lista1 = new HashSet<>();
 		Set<Integer> lista2 = new HashSet<>();
-		
-		
-		Set<Integer> listaFinal = new HashSet<>();
 
 		for (int i = 0; i < 10; i++) {
 			lista1.add(r.nextInt(30));
@@ -24,10 +21,10 @@ public class Exercicio5 {
 		System.out.println("Lista 1: " + lista1);
 		System.out.println("Lista 2: " + lista2);
 
-		listaFinal.addAll(lista1);
-		listaFinal.retainAll(lista2);
+		lista1.retainAll(lista2);
 
-		System.out.println("Lista com intersecção: " + listaFinal);
+		//Averiguar se precisava de ordenação
+		System.out.println("Lista com intersecção: " + lista1);
 	}
 
 }
