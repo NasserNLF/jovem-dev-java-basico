@@ -46,7 +46,7 @@ public class Principal {
 				d = p.getDataNasc();
 			}
 		}
-		// Achei a classe período como o melhor método para calcular idade
+		// Achei a classe Period como o melhor método para calcular idade
 		return "A pessoa mais velha é " + pessoaMaisVelha.getNome() + " com "
 				+ Period.between(pessoaMaisVelha.getDataNasc(), LocalDate.now()).getYears() + " anos";
 	}
