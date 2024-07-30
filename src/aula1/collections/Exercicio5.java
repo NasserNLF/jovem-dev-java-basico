@@ -21,9 +21,10 @@ public class Exercicio5 {
 		System.out.println("Lista 1: " + lista1);
 		System.out.println("Lista 2: " + lista2);
 
+		// Método para juntar a intersecção
 		lista1.retainAll(lista2);
 
-		//Averiguar se precisava de ordenação
+		// Averiguar se precisava de ordenação
 		System.out.println("Lista com intersecção: " + lista1);
 	}
 

@@ -20,6 +20,7 @@ public class Exercicio3 {
 			conjuntoTodos.add(r.nextInt(20));
 		}
 
+		// Ordenando os elementos
 		Collections.sort(conjuntoTodos);
 		System.out.println("Original: " + conjuntoTodos);
 

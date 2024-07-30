@@ -1,6 +1,7 @@
 package aula2.poo.exercicio5;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,9 @@ public class Principal {
 		listaPessoas.add(cadPessoa());
 		JOptionPane.showMessageDialog(null, "Pessoa 2");
 		listaPessoas.add(cadPessoa());
-		
+
+		JOptionPane.showMessageDialog(null ,verificaMaisVelha(listaPessoas));
+
 	}
 
 	public static Pessoa cadPessoa() {
@@ -33,14 +36,18 @@ public class Principal {
 		return p;
 
 	}
-	
+
 	public static String verificaMaisVelha(List<Pessoa> listaPessoas) {
-		String pessoaMaisVelha = "";
-		DateLo idadeMaisVelha = 0
-		for(Pessoa p : listaPessoas) {
-			if (p.getDataNasc() > ) {
-				
+		LocalDate d = LocalDate.now();
+		Pessoa pessoaMaisVelha = null;
+		for (Pessoa p : listaPessoas) {
+			if (p.getDataNasc().isBefore(d) || pessoaMaisVelha == null) {
+				pessoaMaisVelha = p;
+				d = p.getDataNasc();
 			}
 		}
+		// Achei a classe período como o melhor método para calcular idade
+		return "A pessoa mais velha é " + pessoaMaisVelha.getNome() + " com "
+				+ Period.between(pessoaMaisVelha.getDataNasc(), LocalDate.now()).getYears() + " anos";
 	}
 }

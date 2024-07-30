@@ -11,6 +11,7 @@ public class Exercicio4 {
 	public static void main(String[] args) {
 
 		Map<Character, Integer> mapa = new HashMap<>();
+		// Lista para auxiliar na ordenação
 		List<Character> listaCaracteres = new ArrayList<>();
 		String frase = JOptionPane.showInputDialog("Coloque uma frase: ").trim();
 
