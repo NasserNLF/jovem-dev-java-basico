@@ -34,9 +34,9 @@ public class Principal {
 		// Ordenando os carros
 		do {
 			// Primeiro valor
-			int aux = 0;
-			// Segundo valor
 			int pos = 0;
+			// Segundo valor
+			int aux = 0;
 			do {
 				do {
 					if (carros.get(pos).getAno() <= carros.get(aux).getAno()) {
@@ -49,11 +49,12 @@ public class Principal {
 					System.out.println(
 							"Ano: " + carros.get(pos).getModelo() + "\nModelo: " + carros.get(pos).getAno() + "\n");
 					fim = false;
-					carros.remove(pos);
 				} else {
 					pos++;
+					carros.remove(pos);
 				}
 			} while (pos < carros.size() && fim);
+			
 		} while (!carros.isEmpty());
 
 	}
