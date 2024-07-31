@@ -7,4 +7,8 @@ public class PrecoIncorretoException extends RuntimeException {
 	 */
 	private static final long serialVersionUID = -3271629157460630267L;
 	
+	public PrecoIncorretoException(String msg) {
+		super(msg);
+	}
+	
 }

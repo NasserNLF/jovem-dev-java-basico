@@ -49,9 +49,9 @@ public class Principal {
 					System.out.println(
 							"Ano: " + carros.get(pos).getModelo() + "\nModelo: " + carros.get(pos).getAno() + "\n");
 					fim = false;
+					carros.remove(pos);
 				} else {
 					pos++;
-					carros.remove(pos);
 				}
 			} while (pos < carros.size() && fim);
 			

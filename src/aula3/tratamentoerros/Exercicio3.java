@@ -35,13 +35,13 @@ public class Exercicio3 {
 		
 		//Analisar depois
 		
-//		//IllegalStateException
-//		try {
-//			throw new IllegalStateException();
-//			
-//		} catch (IllegalStateException e) {
-//			e.printStackTrace();
-//		}
+		//IllegalStateException
+		try {
+			
+			
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+		}
 
 	}
 
