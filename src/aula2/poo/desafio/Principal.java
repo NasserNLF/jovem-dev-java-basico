@@ -1,10 +1,7 @@
 package aula2.poo.desafio;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.swing.JOptionPane;
 
@@ -15,8 +12,7 @@ public class Principal {
 
 	public Principal() {
 		List<Carro> carros = new ArrayList<>();
-		//Lista para ordenar os carros por ano
-		List<Integer> anos = new ArrayList<>();
+		// Lista para ordenar os carros por ano
 		String modelo = "";
 
 		do {
@@ -30,18 +26,35 @@ public class Principal {
 				c.setModelo(modelo);
 				c.setAno(ano);
 				carros.add(c);
-				anos.add(ano);
 			}
 
 		} while (!modelo.equalsIgnoreCase("fim"));
-		
-		//Ordenando os anos
-		Collections.sort(anos);
-		
-		//Listando
-//		for(Integer a: carros) {
-//			
-//		}
-		
+
+		boolean fim = false;
+		// Ordenando os carros
+		do {
+			// Primeiro valor
+			int aux = 0;
+			// Segundo valor
+			int pos = 0;
+			do {
+				do {
+					if (carros.get(pos).getAno() <= carros.get(aux).getAno()) {
+						aux++;
+					} else {
+						fim = true;
+					}
+				} while (!fim && aux < carros.size());
+				if (aux == carros.size()) {
+					System.out.println(
+							"Ano: " + carros.get(pos).getModelo() + "\nModelo: " + carros.get(pos).getAno() + "\n");
+					fim = false;
+					carros.remove(pos);
+				} else {
+					pos++;
+				}
+			} while (pos < carros.size() && fim);
+		} while (!carros.isEmpty());
+
 	}
 }
