@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import aula3.tratamentoerros.exceptions.PrecoIncorretoException;
 import aula3.tratamentoerros.exceptions.VendaException;
 
 public class Desafio {
@@ -60,7 +59,7 @@ public class Desafio {
 			try {
 				i.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço do item")));
 				if (i.getPreco() <= 0) {
-					throw new PrecoIncorretoException("Valor inválido! Apenas preços acima de R$0");
+					
 				}
 			}catch (RuntimeException e) {
 				JOptionPane.showMessageDialog(null, e.getMessage());

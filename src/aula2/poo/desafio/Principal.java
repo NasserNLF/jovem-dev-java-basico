@@ -1,6 +1,7 @@
 package aula2.poo.desafio;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -56,6 +57,6 @@ public class Principal {
 			} while (pos < carros.size() && fim);
 			
 		} while (!carros.isEmpty());
-
+	
 	}
 }

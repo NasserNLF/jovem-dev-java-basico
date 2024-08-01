@@ -1,5 +1,9 @@
 package aula3.tratamentoerros;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Exercicio3 {
 	public static void main(String[] args) {
 		new Exercicio3();
@@ -33,12 +37,24 @@ public class Exercicio3 {
 			e.printStackTrace();
 		}
 		
-		//Analisar depois
 		
+		//Não consegui fazer
 		//IllegalStateException
 		try {
-			
-			
+			 List<String> nomes = new ArrayList<>();
+			 nomes.add("Nasser");
+			 nomes.add("Ana");
+			 
+			 Iterator<String> iterator = nomes.iterator();
+			 
+			 while(iterator.hasNext()) {
+				 String nome = iterator.next();
+				 System.out.println(nome);
+				 if ("Ana".equals(nome)) {
+					nomes.remove(nome);
+				}
+			 }
+			 
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		}
