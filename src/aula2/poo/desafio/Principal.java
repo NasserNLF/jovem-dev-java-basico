@@ -1,7 +1,6 @@
 package aula2.poo.desafio;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -22,6 +21,7 @@ public class Principal {
 			if (!modelo.equalsIgnoreCase("fim")) {
 				int ano = Integer.parseInt(
 						JOptionPane.showInputDialog("PROGRAMA DE ANÁLISE DE CARROS\n\n" + "Digite o ano do carro:"));
+				
 				Carro c = new Carro();
 				// Setando os atributos do objeto
 				c.setModelo(modelo);
