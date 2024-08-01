@@ -24,10 +24,12 @@ public class Principal {
 		//Instância
 		lista.forEach(p::mostraMinuscula);
 		
-	
+		p.teste(lista);
 		
+	}
 	
-		
+	public void teste(List<String> l) {
+		l.forEach(this::mostraMinuscula);
 	}
 	
 	//Static
