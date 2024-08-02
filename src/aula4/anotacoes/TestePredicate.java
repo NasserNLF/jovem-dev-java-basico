@@ -15,7 +15,6 @@ public class TestePredicate {
 		
 		//Predicate - Percorre internamente
 		lista.removeIf(s -> s.charAt(0) == 'a');
-		
 		lista.forEach(System.out::println);
 		
 	}

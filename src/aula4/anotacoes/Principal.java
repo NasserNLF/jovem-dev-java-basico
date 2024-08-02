@@ -15,8 +15,8 @@ public class Principal {
 //		System.out.println(c2.calcula(2.0, 3.0));
 //		System.out.println(c3.calcula(2.0, 3.0));
 		
-		System.out.println(ClasseTeste.retornaValor(3.0, 5.0, d -> d < 1));
-		
+//		System.out.println(ClasseTeste.retornaValor(3.0, 5.0, d -> d < 1));
+	
 		List<String> lista = new ArrayList<>();
 		lista.add("vasco");
 		
