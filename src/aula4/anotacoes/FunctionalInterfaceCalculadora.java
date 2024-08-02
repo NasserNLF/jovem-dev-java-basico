@@ -3,5 +3,5 @@ package aula4.anotacoes;
 @FunctionalInterface
 public interface FunctionalInterfaceCalculadora {
 	
-	Double calcula(Double valor1, Double valor2);
+	Boolean calcula(Double valor1, Double valor2);
 }

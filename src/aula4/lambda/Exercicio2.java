@@ -21,6 +21,7 @@ public class Exercicio2 {
 			alunos.get(i).setNumeroChamada(i + 1);
 		}
 
+		
 		// Ordenando para mostrar por idade | Criando o comparador
 		Collections.sort(alunos, Comparator.comparing(Aluno::getDataNascimento));
 
@@ -36,6 +37,5 @@ public class Exercicio2 {
 		a.setDataNascimento(); // Função criada para validação dentro da classe
 
 		return a;
-
 	}
 }

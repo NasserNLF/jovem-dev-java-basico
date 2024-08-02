@@ -34,6 +34,7 @@ public class Exercicio3 {
 
 		// Saída
 		alunos.forEach(System.out::println);
+		
 	}
 
 	public static Aluno cadAluno() {
