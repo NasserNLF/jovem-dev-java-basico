@@ -15,6 +15,7 @@ public class Exercicio2 {
 		}
 
 		// Listando os números
+		System.out.println("Números: ");
 		lista.stream().forEach(System.out::println);
 
 		System.out.println("Média dos números maiores que 50: "

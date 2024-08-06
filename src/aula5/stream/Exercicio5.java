@@ -2,10 +2,6 @@ package aula5.stream;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-import aula5.stream.exceptions.ZeroBertoException;
 
 public class Exercicio5 {
 	public static void main(String[] args) {
