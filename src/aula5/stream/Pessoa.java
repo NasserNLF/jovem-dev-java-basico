@@ -20,8 +20,6 @@ public class Pessoa {
 		this.dataNasc = dataNasc;
 	}
 
-
-
 	public String getNome() {
 		return nome;
 	}
@@ -31,6 +29,12 @@ public class Pessoa {
 	public LocalDate getDataNasc() {
 		return dataNasc;
 	}
+
+	@Override
+	public String toString() {
+		return "Pessoa: " + nome + "\nData de Nascimento: " + dataNasc + "\n\n"; 
+	}
+	
 	
 	
 }

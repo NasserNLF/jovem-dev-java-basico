@@ -27,7 +27,7 @@ public class Exercicio3 {
 		alunos.removeIf(a -> a.getNome().charAt(0) == 'T' && a.getNome().charAt(a.getNome().length() - 1) == 'O');
 
 		// Preenchendo os números da chamada
-		Collections.sort(alunos, Comparator.comparing(Aluno::getNome));
+		Collections.sort(alunos, Comparator.comparing(null));
 		for (int i = 0; i <= alunos.size(); i++) {
 			alunos.get(i).setNumeroChamada(i + 1);
 		}
