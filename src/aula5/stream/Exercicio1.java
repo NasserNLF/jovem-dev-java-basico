@@ -19,8 +19,10 @@ public class Exercicio1 {
 		lista.stream().forEach(System.out::println);
 		
 		//Imprimindo a soma
-		System.out.println("Soma dos números: " +  lista.stream().mapToInt(Integer::intValue).sum());
-		
-		
+		System.out.println("Soma: " + somaNumeros(lista));
+	}
+	
+	static Integer somaNumeros(List<Integer> lista) {
+		return lista.stream().mapToInt(Integer::intValue).sum();
 	}
 }

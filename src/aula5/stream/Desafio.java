@@ -2,13 +2,13 @@ package aula5.stream;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Desafio {
 	public static void main(String[] args) {
 
-		List<Pessoa> lista = new ArrayList<Pessoa>();
+		List<Pessoa> lista = new ArrayList<>();
 		// Criando as pessoa
 		lista.add(new Pessoa("Nasser", LocalDate.parse("1960-12-07")));
 		lista.add(new Pessoa("Ana", LocalDate.parse("2010-11-07")));
@@ -21,11 +21,26 @@ public class Desafio {
 		lista.add(new Pessoa("Patricia", LocalDate.parse("1400-01-07")));
 		lista.add(new Pessoa("Messi", LocalDate.parse("2000-02-07")));
 
-		//Utilizando Regex
-		lista.stream().filter(p -> p.getNome().matches("^[AEIOU].*") || (p.getDataNasc().getYear() % 4 == 0 && (p.getDataNasc().getYear() % 100 != 0 || p.getDataNasc().getYear() % 400 == 0)))
-				.sorted(Comparator.comparing(Pessoa::getNome).reversed()).forEach(System.out::println);
+		// Utilizando Regex
 		
+		System.out.println(retornaListaString(lista));
 		
 
 	}
+
+	public static List<String> retornaListaString(List<Pessoa> listaPessoa) {
+		
+		
+		
+		return listaPessoa.stream()			.filter(p -> p.getNome().matches("^[AEIOU].*") || (p.getDataNasc().getYear() % 4 == 0
+						&& (p.getDataNasc().getYear() % 100 != 0 || p.getDataNasc().getYear() % 400 == 0)))
+				.map(p -> p.getNome()).collect(Collectors.toList());
+	}
+	
+	
+	
+	
+	
+	
+	
 }

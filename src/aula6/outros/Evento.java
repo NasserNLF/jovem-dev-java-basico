@@ -1,6 +1,5 @@
 package aula6.outros;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Evento {
