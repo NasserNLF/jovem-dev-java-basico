@@ -18,8 +18,11 @@ public class Exercicio2 {
 		System.out.println("Números: ");
 		lista.stream().forEach(System.out::println);
 
-		System.out.println("Média dos números maiores que 50: "
-				+ lista.stream().filter(i -> i > 50).mapToInt(Integer::intValue).average());
+		System.out.println("Média dos números maiores que 50: " + retornaMediaMaioresCinquenta(lista));
 
+	}
+	
+	public static Double retornaMediaMaioresCinquenta(List<Integer> lista) {
+		return lista.stream().filter(i -> i > 50).mapToInt(Integer::intValue).average().orElse(0.0);
 	}
 }

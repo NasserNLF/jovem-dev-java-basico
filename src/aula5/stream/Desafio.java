@@ -2,6 +2,7 @@ package aula5.stream;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +35,9 @@ public class Desafio {
 		
 		return listaPessoa.stream()			.filter(p -> p.getNome().matches("^[AEIOU].*") || (p.getDataNasc().getYear() % 4 == 0
 						&& (p.getDataNasc().getYear() % 100 != 0 || p.getDataNasc().getYear() % 400 == 0)))
-				.map(p -> p.getNome()).collect(Collectors.toList());
+				.sorted(Comparator.comparing(Pessoa::getNome).reversed())
+				.map(Pessoa::getNome).collect(Collectors.toList());
+				
 	}
 	
 	

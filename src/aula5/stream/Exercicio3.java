@@ -18,7 +18,11 @@ public class Exercicio3 {
 		System.out.println("Números sorteados:");
 		lista.stream().forEach(System.out::println);
 		
-		System.out.println("Quantidade de números 25 na lista: " + lista.stream().filter(i -> i == 25).count());
+		System.out.println("Quantidade de números 25 na lista: " + contaMaior25(lista));
 
+	}
+	
+	public static long contaMaior25(List<Integer> lista) {
+		return lista.stream().filter(i -> i == 25).count();
 	}
 }

@@ -12,7 +12,11 @@ public class Exercicio5 {
 		BigDecimal vlrCir = BigDecimal.valueOf(valorCincunferencia);
 		BigDecimal div = BigDecimal.valueOf(2 * Math.PI);
 
-		System.out.println("Valor do raio: " + vlrCir.divide(div, 4, RoundingMode.HALF_EVEN));
+		System.out.println("Valor do raio: " + calculaRaio(vlrCir, div));
 
+	}
+	
+	public static BigDecimal calculaRaio(BigDecimal vlrCir, BigDecimal div) {
+		return vlrCir.divide(div, 4, RoundingMode.HALF_EVEN);
 	}
 }
