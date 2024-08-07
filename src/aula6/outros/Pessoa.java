@@ -6,7 +6,7 @@ public class Pessoa {
 	private String nome;
 	private String telefone;
 	private LocalDate dataNasc;
-	
+
 	public Pessoa(String nome, String telefone, LocalDate dataNasc) {
 		this.nome = nome;
 		this.telefone = telefone;
@@ -16,14 +16,14 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		
+
 		builder.append("Pessoa: ");
 		builder.append(nome);
 		builder.append(", telefone: ");
 		builder.append(telefone);
 		builder.append(", dataNasc: ");
 		builder.append(dataNasc);
-		
+
 		return builder.toString();
 	}
 
@@ -38,9 +38,5 @@ public class Pessoa {
 	public LocalDate getDataNasc() {
 		return dataNasc;
 	}
-	
-	
-	
-	
-	
+
 }

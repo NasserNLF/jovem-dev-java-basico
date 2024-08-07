@@ -15,6 +15,10 @@ public enum Calculadora1Enum {
 	public String getNomeAmigavel() {
 		return nomeAmigavel;
 	}
+
+	public CalculoInterface getCalculo() {
+		return calculo;
+	}
 	
 	
 
