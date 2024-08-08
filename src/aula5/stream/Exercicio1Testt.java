@@ -26,12 +26,13 @@ class Exercicio1Testt {
 		lista.add(new Pessoa("Felipe", LocalDate.parse("2024-07-07"))); //Apenas Ano Bissexto
 		lista.add(new Pessoa("Nasser", LocalDate.parse("2023-07-07"))); //Nenhum
 		lista.add(new Pessoa("Marcela", LocalDate.parse("1500-07-07"))); //Nenhum
+		lista.add(new Pessoa("Marcelo", LocalDate.parse("2004-07-07"))); //Nenhum
+		
 		
 		//O método está estático pois fiz o exercicio no método MAIN
 		List<String> listaStrings = Desafio.retornaListaString(lista);
-		listaStrings.toString();
 		
-		assertEquals("[Felipe, Elias, Ana]", listaStrings.toString());
+		assertEquals("[Marcelo, Felipe, Elias, Ana]", listaStrings.toString());
 		
 	}
 	

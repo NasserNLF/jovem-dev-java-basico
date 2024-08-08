@@ -15,7 +15,7 @@ public class Evento {
 
 	@Override
 	public String toString() {
-		return "Evento [descricao=" + descricao + ", dataHora=" + dataHora + ", tipoEvento=" + tipoEvento + "]";
+		return "Evento: " + descricao + " | Data/Horário: " + dataHora + " | Tipo do evento: " + tipoEvento + "\n";
 	}
 
 	public String getDescricao() {
