@@ -46,6 +46,17 @@ class Exercicio1Testt {
 		assertEquals(0, listaStrings.size());
 	}
 	
+	@Test
+	void deveRetornarVazioSeNaoTiverCorrespondente() {
+		lista.add(new Pessoa("Nasser", LocalDate.parse("2023-07-07"))); //Nenhum
+		lista.add(new Pessoa("Marcela", LocalDate.parse("1500-07-07"))); //Nenhum
+		lista.add(new Pessoa("Marcelo", LocalDate.parse("2003-07-07"))); //Nenhum
+		
+		List<String> listaStrings = Desafio.retornaListaString(lista);
+		
+		assertEquals(true, listaStrings.isEmpty());
+	}
+	
 	
 
 }
